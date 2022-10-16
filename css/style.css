@@ -588,3 +588,23 @@ tr td{
 	color: #fff;
 	padding-top: 20px;
 }
+
+
+
+
+
+.location p{
+	margin-bottom: 10px;
+}
+.box .thum img{
+	border-radius: 20px;
+}
+.cansl{
+	text-align: center;
+}
+.cansl h2{
+	font-size: 29px;
+}
+.cansl p{
+	font-size: 20px;
+}
