@@ -6,6 +6,10 @@
 	text-decoration: none;
 	list-style: none;
 	scroll-behavior: smooth;
+
+}
+html , body{
+	overflow-x: hidden;
 }
 :root{
 	--bg-color: #fff;
@@ -19,6 +23,7 @@
 body{
 	background: var(--bg-color);
 	color: var(--text-color);
+	/* overflow-x:hidden ; */
 }
 
 header{
@@ -181,7 +186,7 @@ header.sticky{
 }
 .package-content{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 2rem;
 	align-items: center;
 	margin-top: 5rem;
@@ -399,90 +404,6 @@ header.sticky{
 	letter-spacing: 2px;
 }
 
-@media (max-width: 1400px){
-	header{
-		padding: 17px 3%;
-		transition: .2s;
-	}
-	header.sticky{
-		padding: 10px 3%;
-		transition: .2s;
-	}
-	section{
-		padding: 80px 3%;
-		transition: .2s;
-	}
-	:root{
-		--big-font: 4.5rem;
-	  --h2-font: 2.3rem;
-	  --p-font: 1rem;
-	  transition: .2s;
-	}
-}
-
-@media (max-width: 1040px){
-	#menu-icon{
-		display: block;
-	}
-	.stick #menu-icon{
-		color: var(--text-color);
-	}
-	.home{
-		height: 88vh;
-	}
-	.navbar{
-		position: absolute;
-		top: 0;
-		right: -100%;
-		width: 270px;
-		height: 120vh;
-		background: #1067cc;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 150px 30px;
-		transition: 0.5s all;
-	}
-	.navbar a{
-		display: block;
-		margin: 1.2rem 0;
-	}
-	.sticky .navbar a{
-		color: var(--bg-color);
-	}
-	.navbar a:hover{
-		color: var(--text-color);
-	}
-	.open{
-		right: 0;
-	}
-	.list{
-		width: 50%;
-		margin-bottom: 12px;
-	}
-}
-
-@media (max-width: 575px){
-	.list{
-		width: 100%;
-	}
-	.newsletter form{
-		width: 350px;
-	}
-	:root{
-		--big-font: 3.8rem;
-	  --h2-font: 1.8rem;
-	  transition: .2s;
-	}
-	.text{
-		text-align: center;
-	}
-	.home{
-		height: 85vh;
-		transition: .2s;
-	}
-}
-
 
 
 
@@ -491,7 +412,18 @@ header.sticky{
 	display: flex;
 	/* height: 100vh; */
 }
-
+input::placeholder{
+	opacity: 40%;
+}
+textarea::placeholder{
+	opacity: 40%;
+}
+textarea{
+	background-color: #F6F5F5;
+}
+.input-group input{
+	background-color: #F6F5F5;
+}
 .ccontainer-content {
 	width: 50%;
 	text-align: center;
@@ -553,13 +485,13 @@ header.sticky{
 	width: 100%;
 	border: none;
 	outline: none;
-	border-bottom: 1px solid #4a4a4a;
+	border-bottom: 1px solid #aaa8a8;
 	padding-bottom: 5px;
 
 }
 textarea{
 	width: 100%;
-	border: 1px solid #4a4a4a;
+	border: 1px solid #aaa8a8;
 	outline: none;
 	padding: 10px ;
 }
@@ -611,3 +543,122 @@ tr td{
 .package-content h4{
 	color: #6E54FA;
 }
+
+
+
+
+
+
+
+@media (max-width: 1400px){
+	
+	header{
+		padding: 17px 3%;
+		transition: .2s;
+	}
+	header.sticky{
+		padding: 10px 3%;
+		transition: .2s;
+	}
+	section{
+		padding: 80px 3%;
+		transition: .2s;
+	}
+	:root{
+		--big-font: 4.5rem;
+	  --h2-font: 2.3rem;
+	  --p-font: 1rem;
+	  transition: .2s;
+	}
+}
+
+@media (max-width: 1040px){
+	.package-content{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	#menu-icon{
+		display: block;
+	}
+	.stick #menu-icon{
+		color: var(--text-color);
+	}
+	.home{
+		height: 88vh;
+	}
+	.navbar{
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 270px;
+		height: 120vh;
+		background: #1067cc;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 150px 30px;
+		transition: 0.5s all;
+	}
+	.navbar a{
+		display: block;
+		margin: 1.2rem 0;
+	}
+	.sticky .navbar a{
+		color: var(--bg-color);
+	}
+	.navbar a:hover{
+		color: var(--text-color);
+	}
+	.open{
+		right: 0;
+	}
+	.list{
+		width: 50%;
+		margin-bottom: 12px;
+	}
+}
+
+@media (max-width: 575px){
+	.package-content{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.ccontainer{
+		flex-direction: column;
+		margin-top: -90px;
+	}
+	 .ccontainer .conimg{
+		margin-top: 50px;
+	}
+	.contact-box{
+		flex-direction: column;
+	}
+	.input-row{
+		flex-direction: column;
+	}
+	.ccontainer-content{
+		width: 100%;
+		display: block;
+	}
+	.dest-content{
+		display: block;
+	}
+	.list{
+		width: 100%;
+	}
+	.newsletter form{
+		width: 350px;
+	}
+	:root{
+		--big-font: 3.8rem;
+	  --h2-font: 1.8rem;
+	  transition: .2s;
+	}
+	.text{
+		text-align: center;
+	}
+	.home{
+		height: 85vh;
+		transition: .2s;
+	}
+}
+
