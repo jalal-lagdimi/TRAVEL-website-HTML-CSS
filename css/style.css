@@ -577,6 +577,17 @@ tr td{
 		grid-template-columns: repeat(2, 1fr);
 	}
 	
+	.ccontainer{
+		flex-direction: column;
+	}
+	.ccontainer-content{
+		width: 100%;
+		margin-top: -45px;
+	}
+	.ccontainer .conimg{
+		margin-top: 20px;
+		margin-left: 50px;
+	}
 	#menu-icon{
 		display: block;
 	}
@@ -628,6 +639,7 @@ tr td{
 	}
 	 .ccontainer .conimg{
 		margin-top: 50px;
+		margin-left: 10px;
 	}
 	.contact-box{
 		flex-direction: column;
