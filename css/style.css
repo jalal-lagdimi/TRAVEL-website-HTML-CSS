@@ -663,8 +663,11 @@ tr td{
 	}
 	 .ccontainer .conimg{
 		margin-top: 50px;
-		margin-left: 10px; 
+		margin-left: 30px; 
+		width: 580px;
+
 	}
+	
 	.contact-box{
 		flex-direction: column;
 	}
