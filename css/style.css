@@ -442,6 +442,7 @@ textarea{
 .ccontainer-img{
 	margin-top: 10%;
 	width: 50%;
+	margin-right: 45px;
 }
 
 .ccontainer-img .conimg{
@@ -449,6 +450,7 @@ textarea{
 	height: 292px;
 	box-shadow: none;
 	padding-right: 10%;
+	
 }
 
 .contact-box{
@@ -578,15 +580,20 @@ tr td{
 	}
 	
 	.ccontainer{
+		width: 100%;
 		flex-direction: column;
+		
 	}
 	.ccontainer-content{
 		width: 100%;
 		margin-top: -45px;
+		text-align: center;
 	}
 	.ccontainer .conimg{
 		margin-top: 20px;
-		margin-left: 50px;
+		margin-left: 0;
+		margin-right: 0;
+
 	}
 	#menu-icon{
 		display: block;
@@ -627,7 +634,24 @@ tr td{
 		width: 50%;
 		margin-bottom: 12px;
 	}
+ 	.ccontainer-img{
+		width: 100%;
+		display: grid;
+		justify-content: center;
+		padding-left: 90px;
+	}
 }
+
+@media (max-width: 892px){
+	.contact-box{
+		flex-direction: column;
+	}
+	.buttsend{
+		display: block;
+	}
+}
+
+
 
 @media (max-width: 575px){
 	.package-content{
@@ -639,7 +663,7 @@ tr td{
 	}
 	 .ccontainer .conimg{
 		margin-top: 50px;
-		margin-left: 10px;
+		margin-left: 10px; 
 	}
 	.contact-box{
 		flex-direction: column;
@@ -654,6 +678,7 @@ tr td{
 	.dest-content{
 		display: block;
 	}
+	
 	.list{
 		width: 100%;
 	}
