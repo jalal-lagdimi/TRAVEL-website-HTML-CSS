@@ -515,6 +515,12 @@ button{
 	border-radius: 30px;
 	margin-top: 20px;
 }
+ .buttsend:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+	transition: 1s;
+}
+
 tr td:first-child{
 	padding-right: 20px;
 }
@@ -522,7 +528,9 @@ tr td{
 	color: #fff;
 	padding-top: 20px;
 }
-
+.textarea{
+	resize: none;
+}
 
 
 
@@ -660,12 +668,14 @@ tr td{
 	.ccontainer{
 		flex-direction: column;
 		margin-top: -90px;
+		justify-content: center;
+		width: 100%;
 	}
-	 .ccontainer .conimg{
+	.ccontainer-img{
 		margin-top: 50px;
-		margin-left: 30px; 
-		width: 580px;
-
+		height: 100%;
+		width: 110%;
+		
 	}
 	
 	.contact-box{
